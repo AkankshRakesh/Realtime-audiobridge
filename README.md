@@ -24,7 +24,7 @@ A browser-based application that captures microphone input, transcribes speech u
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/realtime-transcriber.git
+git clone https://github.com/AkankshRakesh/realtime-transcriber.git
 cd realtime-transcriber
 ```
 ### 2. Download Translation Model
@@ -68,7 +68,7 @@ Backend API: http://localhost:8000
 │   └── tailwind.config.js     # Tailwind CSS config
 └── docker-compose.yml         # Multi-container orchestration
 ```
-
+![Architecture Diagram](https://raw.githubusercontent.com/AkankshRakesh/Realtime-audiobridge/master/Architecture.png)
 ## Tech Stack
 
 **Frontend:** React, Tailwind CSS, Vite
