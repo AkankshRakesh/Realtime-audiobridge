@@ -68,7 +68,7 @@ Backend API: http://localhost:8000
 │   └── tailwind.config.js     # Tailwind CSS config
 └── docker-compose.yml         # Multi-container orchestration
 ```
-![Architecture Diagram](https://raw.githubusercontent.com/AkankshRakesh/Realtime-audiobridge/master/Architecture.png)
+![Architecture Diagram](https://github.com/AkankshRakesh/Realtime-audiobridge/blob/master/Architecture.png?raw=true)
 ## Tech Stack
 
 **Frontend:** React, Tailwind CSS, Vite
