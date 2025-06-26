@@ -42,7 +42,6 @@ const Transcriber = () => {
         console.error("❌ Error sending blob:", err);
       }
 
-      // 🔁 Restart recording AFTER response is handled
       setTimeout(() => {
         console.log("▶️ Restarting recording...");
         mediaRecorder.start();
@@ -53,11 +52,9 @@ const Transcriber = () => {
       }, 500); // short delay to prevent stack overflow / race
     };
 
-    // 🔄 Initial start
     console.log("🎙️ Recording started");
     mediaRecorder.start();
 
-    // Stop after 5 seconds to start the cycle
     setTimeout(() => {
       console.log("⏹️ Stopping first time...");
       mediaRecorder.stop();

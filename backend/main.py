@@ -34,13 +34,11 @@ async def transcribe(file: UploadFile = File(...)):
     try:
         print(f"🎧 Received file: {file.filename}")
 
-        # Save uploaded file
         with open(webm_path, "wb") as f:
             f.write(await file.read())
 
         print(f"🔄 Converting {webm_path} to {wav_path}...")
 
-        # FFmpeg with error output captured
         result = subprocess.run([
             "ffmpeg", "-y", "-i", webm_path, "-ar", "16000", "-ac", "1", wav_path
         ], capture_output=True, text=True)
@@ -52,12 +50,10 @@ async def transcribe(file: UploadFile = File(...)):
 
         print("✅ WAV conversion successful")
 
-        # Transcribe with Whisper
         segments, _ = model.transcribe(wav_path)
         text = " ".join([s.text for s in segments])
         print("📝 Transcribed text:", text)
 
-        # Translate with Argos
         translated = argostranslate.translate.translate(text, "en", "hi")
         print("🌐 Translated text:", translated)
 
