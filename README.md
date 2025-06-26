@@ -28,7 +28,7 @@ git clone https://github.com/AkankshRakesh/realtime-transcriber.git
 cd realtime-transcriber
 ```
 ### 2. Download Translation Model
-Download the English-Hindi model from Argos Open Tech and place it in the backend folder:
+Download the English-Hindi model from [Argos Open Tech](https://www.argosopentech.com/argospm/index/) and place it in the backend folder:
 ```bash
 mv translate-en_hi-1_1.argosmodel backend/translate-en_hi.argosmodel
 ```
